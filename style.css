@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+:root{
+    font-size: 20px;
+    font-family: 'Oxygen', 'Helvetica Neue';
+}
+
+body{
+    background-color: rgb(11, 142, 175);
+}
+
+.listOfNotes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2rem;
+    height: calc(100vh - 4rem);
+    flex-wrap: wrap;
+}
+
+.noteAdd{
+    height: 30vh;
+    aspect-ratio: 10/7;
+    background-color: #fff;
+    list-style-type: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    min-height: 230px;
+}
+
+.noteAdd img{
+    height: 15vh;
+    transition: all .3s ease;
+}
+
+.noteAdd img:hover{
+    height: 15vh;
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+.noteAdd span{
+    margin: 1rem;
+    letter-spacing: 1px;
+    color: rgb(2, 85, 133);
+}
+
+.popup{
+    background-color: rgb(235, 230, 230);
+    width: 25vw;
+    height:35vw; 
+    position: absolute;
+    top: calc(50% - 15.5vw);
+    left: calc(50% - 12.5vw);
+    border-radius: 10px;
+    z-index: 1;
+    border: 4px solid #000;
+    display: none;
+    min-height: 500px;
+    min-width: 400px;;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+    border-bottom: 1px solid rgba(68, 66, 65, 0.897);
+    min-height: 71px;
+}
+
+.header h2{
+    min-height: 43px;
+}
+
+.popup header img{
+    height: 2rem;
+    transition: all 0.3s ease;
+}
+
+.popup header img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.popup main{
+    padding: 1vw 2vw;
+}
+
+.popup main :where(input,textarea,button){
+    width: 100%;
+    border-radius: 5px;
+    margin: .5vw 0;
+    outline: none;
+}
+
+.title{
+    height: 4vw;
+    font-size: 1.5rem;
+    padding: 1vw;
+    display: block;
+    min-height: 55px;
+}
+
+.description {
+    height: 12vw;
+    resize: none;
+    font-size: 1rem;
+    min-height: 163px;
+}
+
+.popup button{
+    height: 5vw;
+    font-family: 'Oxygen', 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 2rem;
+    background-color: rgb(24, 190, 255);
+    color: rgb(255, 247, 247);
+    transition: all 0.3s ease;
+    min-height: 68px;
+}
+
+.popup button:hover{
+    opacity: 90%;
+    cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+}
+
+.note{
+    height: 30vh;
+    aspect-ratio: 10/7;
+    background-color: #fff;
+    list-style-type: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    min-height: 230px;
+}
+
+.noteHeader{
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    padding: .5rem;
+}
+
+.noteDescription{
+    height: 60%;
+    width: 100%;
+    padding: .6rem 1rem;
+}
+
+.noteDate{
+    height: 20%;
+    padding: .3rem 1rem;
+    width: 100%;
+    color: rgb(119, 119, 119);
+    font-weight: 300;
+    border-top: 1px solid rgba(128, 128, 128, 0.548);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tDots{
+    font-size: 2rem;
+    position: relative; 
+    top: -.6rem;
+    transition: all .3s ease;
+}
+
+.tDotsAct{
+    background-color: #fff;
+    display: block;
+    width: calc(35% + 2rem);
+    height: calc(220% + 1.5rem);
+    top: -29px;;
+    left: 1rem;
+    border-radius: 10px;
+    transform: scale(1) !important;
+    border: 1px solid grey;
+}
+
+.edit:hover{
+    background-color: #1be44665;
+}
+
+.del{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.del:hover{
+    background-color: #b9131b65;
+}
+
+.tDots:hover{
+    transform: scale(1.2);
+}
+
+.beforeHeader{
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.beforeDescription{
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 5rem;
+    border-radius: 10px;
+    padding: .2rem 1rem;
+    font-size: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    resize: none;
+}
+
+.popupInputHeader{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.popupInputHeader span{
+    color: red;
+    font-size: .9rem;
+    position: relative;
+    top: .2rem;
+    opacity: 0;
+    transition: all .2s ease;
+} 
+
+figcaption{ 
+    color: black;
+    font-size: .9rem;
+    margin-left: .4rem;
+}
+
+figure{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border-bottom: 1px solid grey;
+}
+
+@media (max-width: 1750px) {
+    .popupInputHeader span{
+        font-size: .7rem;
+    } 
+}
+
+@media (max-width: 1430px) {
+    .popup{
+        top: calc(50% - 250px);
+    }
+}
+
+@media (max-width: 1600px) {
+    .popup{
+        left: calc(50% - 200px);
+    }
+}

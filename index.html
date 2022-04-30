@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul data-list-of-notes class="listOfNotes" >
+        <li class="noteAdd">
+            <img data-add-note src="img/plus.png" alt="plus">
+            <span>Add new note</span>
+        </li>
+    </ul>
+    <div data-popup class="popup">
+        <header class="header">        
+            <h2>Add a new note</h2>
+            <img data-popup-exit src="img/button.png" alt="exit">
+        </header>
+        <main>
+            <header class="popupInputHeader">
+                <h3>Title</h3> 
+                <span data-popup-title-span>Title must have value</span>
+            </header>
+            <input data-popup-title type="text" class="title">
+            <header class="popupInputHeader">
+                <h3>Description</h3>
+                <span data-popup-description-span >Description must have value</span> 
+            </header>
+            <textarea data-popup-description class="description"></textarea>
+            <button data-popup-btn>Add Note</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
