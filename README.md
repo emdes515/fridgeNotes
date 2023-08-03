@@ -18,4 +18,5 @@ This has been one of the first projects created by me. It learn me a lot about J
 * CSS
 * HTML
 * Git Hub Pages
+* RWD
 
