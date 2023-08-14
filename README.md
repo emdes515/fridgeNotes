@@ -3,7 +3,7 @@
 🔗 Link to project: https://emdes515.github.io/fridgeNotes/
 
 It is a simple web application where you can create notes like on your fridge. 
-This has been one of the first projects created by me. It learn me a lot about JS and DOM. 
+That has been one of the first projects created by me. It learnt me a lot about JS and DOM. 
 
 ## 🪶 features 🪶
 * creating notes
